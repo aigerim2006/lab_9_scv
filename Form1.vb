@@ -7,7 +7,7 @@ Public Class Form1
     Public Async Function GetDataFromServerAsync() As Task(Of List(Of DiseaseRecord))
         Using client As New HttpClient()
             Try
-                Dim url As String = "http://api.health.kg/v1/diseases"
+                Dim url As String = "https://jsonplaceholder.typicode.com/posts"
                 Dim response As HttpResponseMessage = Await client.GetAsync(url)
 
                 If response.IsSuccessStatusCode Then
